@@ -1,4 +1,5 @@
 package org.junit.tests.assertion;
+import java.util.Comparator;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.instanceOf;
@@ -410,6 +411,7 @@ public class AssertionTest {
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
     }
+    
 
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
