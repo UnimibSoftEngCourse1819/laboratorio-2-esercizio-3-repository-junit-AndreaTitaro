@@ -1,4 +1,5 @@
 package org.junit.tests.assertion;
+import java.util.Comparator;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.instanceOf;
@@ -411,11 +412,13 @@ public class AssertionTest {
         assertEquals(1.0d, 1.0d, 0.0d);
     }
     
+
     @Test
     public void greatherThan() {
         Assert.assertTrue(Assert.assertGreatherThanPrimitive(2,1) == 1);
         Assert.assertTrue(Assert.assertGreatherThanPrimitive(2.1,1.1) == 1);
     }
+
 
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {

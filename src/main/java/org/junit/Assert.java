@@ -1,5 +1,7 @@
 package org.junit;
 
+import java.util.Comparator;
+
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.junit.function.ThrowingRunnable;
@@ -1034,6 +1036,7 @@ public class Assert {
         return message != null && message.length() != 0 ? message + ": " : "";
     }
     
+
     public static int assertGreatherThanPrimitive(int o1,int o2) {
         if(o1 > o2) 
             return 1;
@@ -1045,4 +1048,13 @@ public class Assert {
             return 1;
         return -1;
     }
+
+    public static <T> void assertGreaterThan(T o1, T o2, Comparator<T> comparator) {
+        if( comparator.compare(o1, o2) == 1 ) {
+            assertTrue(true);
+        }else {
+            assertTrue(false);
+        }
+    }
+
 }
