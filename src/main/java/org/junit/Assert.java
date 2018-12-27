@@ -1033,4 +1033,16 @@ public class Assert {
     private static String buildPrefix(String message) {
         return message != null && message.length() != 0 ? message + ": " : "";
     }
+    
+    public static int assertGreatherThanPrimitive(int o1,int o2) {
+        if(o1 > o2) 
+            return 1;
+        return -1;
+    }
+    
+    public static int assertGreatherThanPrimitive(double o1,double o2) {
+        if(o1 > o2) 
+            return 1;
+        return -1;
+    }
 }

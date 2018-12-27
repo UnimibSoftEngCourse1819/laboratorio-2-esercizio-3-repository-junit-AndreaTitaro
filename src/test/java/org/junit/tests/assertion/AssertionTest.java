@@ -410,6 +410,12 @@ public class AssertionTest {
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
     }
+    
+    @Test
+    public void greatherThan() {
+        Assert.assertTrue(Assert.assertGreatherThanPrimitive(2,1) == 1);
+        Assert.assertTrue(Assert.assertGreatherThanPrimitive(2.1,1.1) == 1);
+    }
 
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
